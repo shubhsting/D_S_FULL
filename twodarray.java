@@ -7,6 +7,7 @@ class twodarray {
         sb_name.append("shubham");// shallow copy
         String str = "shubham ";
         str = str + "singh";// deep copy
+        // diff bw stringbuilder and string==== diff bw deep copy and shallow copy
     }
 
     public static void horizontalprint(int[][] arr) {
