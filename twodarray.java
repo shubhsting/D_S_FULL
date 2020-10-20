@@ -3,7 +3,10 @@ import java.util.*;
 
 class twodarray {
     public static void main(String[] args) {
-
+        StringBuilder sb_name = new StringBuilder();
+        sb_name.append("shubham");// shallow copy
+        String str = "shubham ";
+        str = str + "singh";// deep copy
     }
 
     public static void horizontalprint(int[][] arr) {
@@ -30,8 +33,8 @@ class twodarray {
         // first col arr.length-1 se 0 tak
 
         ArrayList<Integer> list = new ArrayList<>();
-        int[] arr_= new int[5];
-      
+        int[] arr_ = new int[5];
+
     }
 
 }
