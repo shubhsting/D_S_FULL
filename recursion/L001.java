@@ -3,6 +3,16 @@ import java.util.*;
 public class L001 {
     public static void main(String[] args) {
         int[] arr = {};
+        int shubham = 0;
+
+        int[] ar = new int[5];
+
+        for (int i = 0; i < 5; i++)
+            System.out.println(arr[i]);
+        // enhanced loop
+        for (int ele : ar)
+            System.out.println(ele);
+
         System.out.println(greatest(arr, 0));
     }
 
@@ -59,6 +69,34 @@ public class L001 {
         if (arr[idx] == num)
             return true;
         return false;
+    }
+
+    // complexities
+    // dry run
+    public static ArrayList<String> all_subseq(String str) {
+        if (str.length() == 0)
+            return new ArrayList<>();
+        ArrayList<String> myAns = new ArrayList<>();
+        // subprob
+        ArrayList<String> subprob = all_subseq(str.substring(1));
+        char ch = str.charAt(0);
+        // for(String st:str)
+        for (int i = 0; i < subprob.size(); i++) {
+            String st = subprob.get(i);
+            myAns.add(st);
+            myAns.add(ch + st);
+        }
+        return myAns;
+    }
+
+    public static void all_subseq_02(String ques, String ans) {
+        if (ques.length() == 0) {
+            System.out.println(ans);
+            return;
+        }
+        char ch = ques.charAt(0);
+        all_subseq_02(ques.substring(1), ans);
+        all_subseq_02(ques.substring(1), ans + ch);
     }
 
 }
